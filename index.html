@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,37 +9,46 @@
     <title>Seminar Practice</title>
 </head>
 <body>
-    <header>
+    <header class="wrapper page-header">
         <a> 
-            <img src="./cat.png"/>
+            <img src="./cat.png" class="logo_img"/>
         </a>
         <nav>
-            <ul>
-                <li>소개</li>
-                <li>html</li>
-                <li>css</li>
-                <li>javascript</li>
+            <ul class="navi">
+                <li><a>소개</a></li>
+                <li><a>취미</a></li>
+                <li><a href="https://poolc.org/">풀씨</a></li>
+                <li><a>디스코드</a></li>
             </ul>
         </nav>
     </header>
-    <div>
-        풀씨 웹 기초 세미나 연습하고 있어요
-        HTML/CSS 다 까먹었어요 ㅠㅠㅠ
+    <div class="content wrapper">
+        안녕하세요 김은수입니다!
     </div>
     <aside>
-        <nav>
-            <ul>
-                <li>소개</li>
-                <li>html</li>
-                <li>css</li>
-                <li>javascript</li>
-            </ul>
-        </nav>
+        <ul>
+            <li>소개</li>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
     </aside>
-    <footer>
+    <footer class="wrapper">
         <nav>
             연락처: 010-9360-8442
         </nav>
     </footer>
+    <!--<script>
+        const content=document.getElementById('content');
+        const footer=document.getElementsByTagName("footer")[0];
+        footer.addEventListener("click",function(){
+            footer.innerText="웹 세미나 문의 010-9893 3417";
+        });
+        const content=document.getElementsById('content');
+        const intro=document.getElementsByTagName('li')[0];
+        intro.addEventListener('click', function(){
+            intro.innerText="소개는 필요없어"
+        });
+    </script>-->
 </body>
 </html>
