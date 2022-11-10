@@ -69,3 +69,8 @@ footer{
     padding: 26px 0;
 
 }
+
+a:hover{
+    cursor: pointer;
+    color: white;
+}

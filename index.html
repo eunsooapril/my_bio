@@ -15,22 +15,22 @@
         </a>
         <nav>
             <ul class="navi">
-                <li><a>소개</a></li>
-                <li><a>취미</a></li>
-                <li><a href="https://poolc.org/">풀씨</a></li>
-                <li><a>디스코드</a></li>
+                <li><a href = "index.html">소개</a></li>
+                <li><a onclick="select('html')">html</a></li>
+                <li><a onclick="select('css')">css</a></li>
+                <li><a onclick="select('JavaScript')">JavaScript</a></li>
             </ul>
         </nav>
     </header>
-    <div class="content wrapper">
+    <div class = "content wrapper" id="content">
         안녕하세요 김은수입니다!
     </div>
     <aside>
-        <ul>
-            <li>소개</li>
-            <li>html</li>
-            <li>css</li>
-            <li>javascript</li>
+        <ul class = "aside_list">
+            <li><a href = "index.html">소개</a></li>
+            <li><a onclick="select('html')">html</a></li>
+            <li><a onclick="select('css')">css</a></li>
+            <li><a onclick="select('JavaScript')">JavaScript</a></li>
         </ul>
     </aside>
     <footer class="wrapper">
@@ -38,17 +38,27 @@
             연락처: 010-9360-8442
         </nav>
     </footer>
-    <!--<script>
-        const content=document.getElementById('content');
-        const footer=document.getElementsByTagName("footer")[0];
-        footer.addEventListener("click",function(){
-            footer.innerText="웹 세미나 문의 010-9893 3417";
-        });
-        const content=document.getElementsById('content');
-        const intro=document.getElementsByTagName('li')[0];
-        intro.addEventListener('click', function(){
-            intro.innerText="소개는 필요없어"
-        });
-    </script>-->
+    <script>
+        const content = document.getElementById("content");
+
+        const js = `<div style = "background-color: pink">JavaScript</div>`;
+        const css = `<div style = "background-color: skyblue">CSS</div>`;
+        const html = `<div style = "background-color: lemonchiffon">HTML</div>`;
+        
+        function select(page){
+            switch(page){
+                case "html":
+                    content.innerHTML = html;
+                    break;
+                case "css":
+                    content.innerHTML = css;
+                    break;
+                case "JavaScript":
+                    content.innerHTML = js;
+                    break;
+            }
+
+        }
+    </script>
 </body>
 </html>
